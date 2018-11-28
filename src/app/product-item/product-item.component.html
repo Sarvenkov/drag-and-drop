@@ -1,0 +1,41 @@
+<article class="item-card">
+
+  <figure class="item-card__figure">
+    <button *ngIf="inCart" class="item-card__close-btn" (click)="close()">
+      <img src="../../assets/images/plus.png" alt="">
+    </button>
+    <img class="item-card__img" src={{item.imageUrl}} alt="Photo of a Shiba Inu">
+  </figure>
+
+  <div class="flex-container">
+    <div class="item-card__content">
+      <header class="item-card__title">
+        <h3>{{item.name}}</h3>
+      </header>
+      <p class="item-card__description">
+        {{item.description}}
+      </p>
+    </div>
+
+    <div *ngIf="!inCart" class="item-card__action">
+      <button mat-button class="item-card__btn btn--minus" (click)="decrement()">−</button>
+      <span class="item-card__amount">{{item.selected}}</span>
+      <button mat-button class="item-card__btn btn--plus"(click)="increment()">+</button>
+      <div class="item-card__price">{{item.selected}} x {{item.price}} ₽</div>
+    </div>
+    <div *ngIf="inCart" class="item-card__action">
+      <button mat-button class="item-card__btn btn--minus"
+              (click)="decrementOrIncrementInCart('decrement')">−</button>
+      <span class="item-card__amount">{{item.selected}}</span>
+      <button mat-button class="item-card__btn btn--plus"
+              (click)="decrementOrIncrementInCart('increment')">+</button>
+      <div class="item-card__price">{{item.selected * item.price}} ₽</div>
+    </div>
+
+  </div>
+
+  <footer *ngIf="!inCart" class="item-card__footer">
+    <p class="item-card__balance">*Остаток на складе: {{item.balance}} шт</p>
+  </footer>
+
+</article>

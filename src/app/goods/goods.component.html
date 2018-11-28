@@ -1,0 +1,58 @@
+<div class="wrapper">
+  <header class="main-header">
+    <h1 class="main-header__title">Для добавления товара,<br> удерживайте его мышкой и перенесите в корзину</h1>
+    <img src="../../assets/images/arrow.png" alt="">
+  </header>
+
+  <div class="container">
+
+    <article class="card">
+      <header class="card__header">
+        <h2 class="card__title">Товары</h2>
+      </header>
+      <div class="card__container"
+           cdkDropList
+           #goodsList="cdkDropList"
+           [cdkDropListData]="goods"
+           [cdkDropListConnectedTo]="[cartList]"
+           (cdkDropListDropped)="drop($event)" >
+        <app-product-item *ngFor="let item of goods"
+                          [item]="item" [inCart]="false"
+                          cdkDrag
+                          (mousedown)="onSelect(item, 'zoneGoods')">
+        </app-product-item>
+      </div>
+    </article>
+
+    <article class="card">
+      <header class="card__header">
+        <h2 class="card__title">Корзина</h2>
+      </header>
+      <div class="card__container container--cart"
+           cdkDropList
+           #cartList="cdkDropList"
+           [cdkDropListData]="cart"
+           [cdkDropListConnectedTo]="[goodsList]"
+           (cdkDropListDropped)="drop($event)">
+        <app-product-item  *ngFor="let item of cart"
+                           [item]="item" [inCart]="true"
+                           cdkDrag
+                           (mousedown)="onSelect(item, 'zoneCart')"
+                           (closeCard)="closeCard()"
+                           (quantityChange)="quantityChange($event)">
+        </app-product-item>
+        <div *ngIf="total === 0" class="empty-cart">
+          <img class="img-cart" src="../../assets/images/icon-ecommerce-black2.svg" alt="Корзина пуста">
+          <p class="text-cart">Корзина пуста</p>
+        </div>
+      </div>
+      <footer *ngIf="total !== 0" class="card__footer">
+        <div class="card__total">
+          <img src="../../assets/images/cart.png" alt="">
+          <p class="card__total-cost">Итого: <span>{{total}} ₽</span></p>
+        </div>
+      </footer>
+    </article>
+
+  </div>
+</div>

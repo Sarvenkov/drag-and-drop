@@ -1,0 +1,136 @@
+.wrapper {
+  width: 920px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 60px;
+  width: 100%;
+}
+
+.main-header{
+  text-align: center;
+}
+
+.main-header__title{
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 31px;
+  color: #007dc0;
+  letter-spacing: 0.04em;
+  margin-top: 30px;
+}
+
+.card {
+  display: inline-block;
+  background-color: #e2e2e2;
+  width: 420px;
+  height: 600px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.card__header {
+  height: 60px;
+  width: 100%;
+  margin-top: 0;
+  background-color: #007dc0;
+}
+
+.card__title {
+  margin: 0 0 0 26px;
+  color: #ffffff;
+  line-height: 60px;
+}
+
+.card__container {
+  width: 100%;
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+
+.card__container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card__container::-webkit-scrollbar-track,
+.card__container::-webkit-scrollbar-thumb {
+  border: 7px solid rgba(255,255,255,0);
+  background-clip: padding-box;
+}
+
+.card__container::-webkit-scrollbar-track {
+  background-color: #e2e2e2;
+}
+
+.card__container::-webkit-scrollbar-thumb {
+  background-color: #70afd1;
+}
+
+.container--cart {
+  height: calc(100% - 116px);
+}
+
+.card__footer {
+  height: 56px;
+  width: 100%;
+  background-color: #fff;
+}
+.card__total {
+  margin: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+}
+
+.empty-cart {
+  margin: 120px auto 0;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  border: #cfcfcf dashed 3px;
+
+  .img-cart {
+    display: block;
+    width: 125px;
+    margin: 60px auto 20px;
+  }
+
+  .text-cart {
+    color: #686868;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.card__total {
+  margin-left: 145px;
+  font-size: 22px;
+}
+
+.card__total > img {
+  position: relative;
+  top: 12px
+}
+
+.card__total-cost {
+  display: inline;
+  vertical-align: bottom;
+  line-height: 60%;
+  margin-left: 8px;
+}
+
+.card__total-cost > span {
+  vertical-align: bottom;
+  font-weight: 500;
+  color: #40aa00;
+  line-height: 60%;
+  margin-left: 50px;
+}
+

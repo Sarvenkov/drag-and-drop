@@ -1,0 +1,32 @@
+.wrapper {
+  width: 920px;
+  height: 500px;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+}
+.card {
+  display: inline-block;
+  background-color: #e2e2e2;
+  width: 420px;
+  height: 600px;
+}
+.card__header {
+  height: 60px;
+  width: 100%;
+  margin-top: 0;
+  background-color: #007dc0;
+}
+.card__title {
+  margin: 0 0 0 20px;
+  color: #ffffff;
+  line-height: 60px;
+}
+.card__container {
+  width: 100%;
+  height: calc(100% - 60px);
+}

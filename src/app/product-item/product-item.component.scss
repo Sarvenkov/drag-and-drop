@@ -1,0 +1,116 @@
+.item-card {
+  background-color: #fff;
+  width: 385px;
+  margin: 7px auto;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.item-card__figure {
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.item-card__img {
+  width: 100%;
+  margin: -30px 0 0 0;
+}
+
+.flex-container {
+  display: flex;
+  border-bottom: #e2e2e2 solid 2px;
+}
+
+.item-card__content {
+  width: 65%;
+  margin: 0;
+  padding: 0 20px 0 24px;
+}
+
+.item-card__action {
+  width: 30%;
+  margin: 12px 0px;
+}
+
+.item-card__footer {
+  margin: 0;
+}
+
+.item-card__price {
+  color: #40aa00;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 12px;
+  text-align: center;
+  width: 100px;
+}
+
+.item-card__close-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  cursor: pointer;
+}
+
+.item-card__figure {
+  position: relative;
+}
+
+.item-card__btn {
+  display: inline-block;
+  background-color: #fff;
+  border: #007dc0 solid 2px;
+  border-radius: 2px;
+  font-size: 22px;
+  color: #858585;
+  line-height: 6px;
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn--minus {
+  border-right: none;
+}
+
+.btn--plus {
+  border-left: none;
+}
+
+.item-card__amount {
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 22px;
+  border-top: #e2e2e2 solid 2px;
+  border-bottom: #e2e2e2 solid 2px;
+}
+
+.item-card__balance {
+  font-size: 13px;
+  color: #989898;
+  font-weight: 500;
+  padding: 14px 22px;
+  margin: 0;
+}
+
+.item-card__title > h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #2f2f2f;
+  margin: 22px 0 0 0;
+}
+
+.item-card__description {
+  font-size: 16px;
+  line-height: 22px;
+  color: #5c5c5c;
+  margin: 12px 0;
+}
